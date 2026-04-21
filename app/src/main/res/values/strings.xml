@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">trailHeadersTest</string>
+    <string name="repro_title">gRPC trailing metadata repro</string>
+    <string name="repro_hint">repro_server.py plaintext :50051, TLS выкл. Host: эмулятор 10.0.2.2 / телефон — Wi‑Fi IP ноута. Кнопка «PERMISSION_DENIED + trailers» ближе к моку ChangeEmail (ошибка gRPC + x-plata-generic-challenge-v3) для Proxyman.</string>
+    <string name="field_host">Host</string>
+    <string name="field_port">Port</string>
+    <string name="field_tls">TLS</string>
+    <string name="field_unary_body">Unary body</string>
+    <string name="action_unary">Unary RPC</string>
+    <string name="action_unary_denied">Unary PERMISSION_DENIED + trailers (как ChangeEmail mock)</string>
+    <string name="action_client_stream">Client-streaming RPC</string>
+    <string name="section_log">Log</string>
+    <string name="log_empty">No result yet</string>
+    <string name="log_sending_unary">Unary: отправляю запрос… (Logcat фильтр: TrailHeadersGrpc)</string>
+    <string name="log_sending_unary_denied">UnaryDenied: жду PERMISSION_DENIED + trailers…</string>
+    <string name="log_sending_stream">ClientStream: отправляю чанки… (Logcat фильтр: TrailHeadersGrpc)</string>
+    <string name="error_grpc_alpn">Ошибка TLS/ALPN (h2): клиент шёл по TLS, а сервер не согласовал HTTP/2 для gRPC. Для repro_server.py выключи TLS. Если целишься в Proxyman — нужен порт/режим с gRPC+h2, иначе используй прямой IP:50051 без TLS.</string>
+    <string name="error_host_blank">Укажи host (поле не может быть пустым).</string>
+    <string name="error_host_zero">0.0.0.0 с телефона/эмулятора использовать нельзя: это не адрес сервера. На эмуляторе — 10.0.2.2; на телефоне — IP ноута в той же Wi‑Fi сети (например 192.168.x.x).</string>
 </resources>
